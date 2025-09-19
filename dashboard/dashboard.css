@@ -1,11 +1,12 @@
-/* Importing Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -100,29 +101,24 @@ body {
 }
 .links hr {
     margin: 10px 8px;
-    border: 1px solid #4c4c4c;
+    border: 1px solid #b1b1b1;
 }
 .sidebar:hover .links hr {
     border-color: transparent;
 }
-.links li span:hover {
-    color: #222;
-}
+
 .links li span {
     transition: color 0.5s ease;
     padding: 12px 10px;
-    color: white;
+    color: #b1b1b1;
 }
 .links li a {
     padding: 10px;
-    color: #fff;
+    color: #b1b1b1;
     display: none;
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
-}
-.links li a:hover {
-    color: #222;
 }
 
 .sidebar:hover .links li a {
