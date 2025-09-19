@@ -16,30 +16,23 @@ header {
     padding: 30px 120px;
     position: sticky;
     top: 0;
-
-    background-color: rgba(189, 189, 189, 0.14);
-    border: 1px solid rgba(189, 189, 189, 0.22);
-
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(189, 189, 189, 0.2);
+    border: 1px solid rgba(189, 189, 189, 0.5);
+    box-shadow: 0 4px 30px rgba(189, 189, 189, 0.5);
     backdrop-filter: blur(10.3px);
     -webkit-backdrop-filter: blur(10.3px);
     margin: 10px;
     border-radius: 10px;
-
     top: 10px;
 }
 
 body {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-image: url("../img/bg.webp");
-    object-fit: cover;
-    height: 120vh;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
 }
 
 .logo {
