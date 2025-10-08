@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <title>کارت محصول واکنش‌گرا و انیمیشنی | CodingLab</title>
+        <link rel="stylesheet" href="index.css" />
+        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div class="product-card">
+            <div class="logo-cart">
+                <!--<img src="images/logo.jpg" alt="logo">-->
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+
+            <!-- تصاویر محصول -->
+            <div class="main-images">
+                <img id="black" class="black active" src="images/black.webp" alt="سیاه" />
+                <img id="orange" class="orange" src="images/orange.webp" alt="نارنجی" />
+                <img id="white" class="white" src="images/white.webp" alt="سفید" />
+            </div>
+
+            <!-- جزئیات محصول -->
+            <div class="shoe-details">
+                <span class="shoe_name">گوشی موبایل اپل مدل iPhone Air ZAA eSim</span>
+                <p>ظرفیت 256 گیگابایت و رم 12 گیگابایت - نات اکتیو</p>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+            </div>
+
+            <!-- انتخاب رنگ و قیمت -->
+            <div class="color-price">
+                <div class="color-option">
+                    <span class="color">رنگ:</span>
+                    <div class="circles">
+                        <span class="circle black active" id="black"></span>
+                        <span class="circle orange" id="orange"></span>
+                        <span class="circle white" id="white"></span>
+                    </div>
+                </div>
+                <div class="price">
+                    <span class="price_num">۲۰۰ $</span>
+                    <span class="price_letter">فقط دویست دلار</span>
+                </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید -->
+            <div class="button">
+                <div class="button-layer"></div>
+                <button>افزودن به سبد خرید</button>
+            </div>
+        </div>
+
+        <script>
+            let circle = document.querySelector(".color-option");
+            circle.addEventListener("click", (e) => {
+                let target = e.target;
+                if (target.classList.contains("circle")) {
+                    circle.querySelector(".active").classList.remove("active");
+                    target.classList.add("active");
+                    document.querySelector(".main-images .active").classList.remove("active");
+                    document.querySelector(`.main-images .${target.id}`).classList.add("active");
+                }
+            });
+        </script>
+    </body>
+</html>
